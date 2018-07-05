@@ -6,9 +6,10 @@ body {
   font-family: Helvetica, sans-serif;
   font-weight: normal;
   font-size: 14px;
-  color: #515151;
+  /* color: #515151; */
   max-width: 1200px;
   margin: 0 auto;
+  background-color: rgb(rgb(247, 247, 247), green, blue);
 }
 
 header{
@@ -18,6 +19,7 @@ header{
   grid-area: header;
   margin-bottom: 20px;
   background-color: #1C5D99;
+  box-shadow: 1px 2px 2px #1C5D99;
 }
 
 .logo {
@@ -27,7 +29,7 @@ header{
 }
 
 .logo img {
-  height: 100px;
+  height: 125px;
 }
 
 a {
@@ -39,7 +41,7 @@ a {
   grid-row: 1/2;
   justify-self: end;
   margin: 20px;
-  font-size: 1.5em;
+  font-size: 1.6em;
 }
 
 .info a {
@@ -51,8 +53,8 @@ a {
 }
 
 .info .search {
-  margin-left: 5px;
-  padding-left: 5px;
+  margin-left: 15px;
+  padding-left: 10px;
   border-left: 1px solid grey;
 }
 
@@ -72,11 +74,13 @@ a {
 }
 .menu ul li {
   display: inline-block;
-  margin-left: 30px;
+  padding-left:40px;
 }
 .menu ul li a{
-  color: #639FAB;
-  font-size:1.5em;
+  color: rgb(119, 190, 204);
+  font-size:1.6em;
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 700;
 }
 
 #menu li a:hover{
@@ -102,11 +106,17 @@ a {
 .post {
   max-width: 300px;
   box-shadow: 0 0 3px 1px #dddddd;
+  overflow: hidden;
 }
 
 .post-img {
   display: block;
   width: 100%;
+  transition: all 1s ease;
+}
+
+.post:hover .post-img {
+  transform: scale(1.2);
 }
 
 .post-info {
@@ -147,15 +157,16 @@ a {
 .aside{
   grid-area: aside;
   margin-left: 20px;
+  box-shadow: 1px 2px 2px #312c2cec;
 }
 
 .author {
   display: flex;
   align-items: center;
-  border: solid 1px #dedede;
   padding: 10px;
   flex: 1 30%;
   min-width: 250px;
+  box-shadow: 0 2px 3px #dedede;
 }
 
 .author-photo{
@@ -168,11 +179,13 @@ a {
 }
 
 .author-name{
+  font-family: "Titillium Web", sans-serif;
   font-size: 1.4em;
-  font-weight: bold;
+  font-weight: 600;
   margin-bottom: 5px;
 }
 .author-about{
+  font-family: "Titillium Web", sans-serif;
   font-size: 1.1em;
 }
 
@@ -184,6 +197,8 @@ a {
 .aside .social{
   text-align: center;
   margin: 15px 0 10px 0;
+  padding-bottom: 10px;
+  box-shadow: 0 2px 3px #dedede;
 }
 
  .aside .social a{
@@ -192,8 +207,13 @@ a {
   color: #639FAB;
 }
 
+.aside .social a:hover{
+ color: white;
+}
+
 .subscribe {
   background-color: #222222;
+  box-shadow: 0 2px 3px #dedede;
 }
 .subscribe .subscribe-fields,
 .subscribe .subscribe-button{
@@ -224,6 +244,8 @@ a {
 }
 .search form{
   text-align: center;
+  padding: 10px 0;
+  box-shadow: 0 2px 3px #dedede;
 }
 .search input[type="search"]{
   width: 80%;
@@ -239,21 +261,31 @@ a {
   margin-left: -5px;
 }
 
+.tags{
+  box-shadow: 0 2px 3px #dedede;
+}
+
 .tags .cloud {
-  margin: 5px 5px;
+  padding: 10px 5px;
 }
 .tags .cloud li {
   font-size: 1em;
   color: white;
   list-style: none;
   display: inline-block;
-  margin: 4px 1px;
+  margin: 4px 0;
   padding: 2px;
   border-radius: 2px;
   background-color: rgba(99, 159, 171,0.5);
 }
 
+.tags .cloud li:hover {
+  color: rgb(99, 159, 171);
+  background-color: darkslategray;
+}
+
 .last-comments {
+  padding-top: 10px;
   display: flex;
   flex-wrap: wrap;
   display: grid;
@@ -301,6 +333,13 @@ a {
 .footer .copyrights{
   margin: 0 20px;
   font-size: 1.2em;
+}
+
+.footer .info a{
+  color: white;
+}
+.footer .info a:hover{
+  text-decoration: underline;
 }
 
 @media (max-width: 780px){
