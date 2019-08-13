@@ -6,7 +6,6 @@ body {
   font-family: Helvetica, sans-serif;
   font-weight: normal;
   font-size: 14px;
-  /* color: #515151; */
   max-width: 1200px;
   margin: 0 auto;
   background-color: rgb(rgb(247, 247, 247), green, blue);
@@ -109,8 +108,11 @@ a {
   overflow: hidden;
 }
 
+.post-img-wrapper {
+  overflow: hidden;
+}
+
 .post-img {
-  display: block;
   width: 100%;
   transition: all 1s ease;
 }
