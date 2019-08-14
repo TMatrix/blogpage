@@ -5,18 +5,18 @@
 body {
   font-family: Helvetica, sans-serif;
   font-weight: normal;
-  font-size: 14px;
+  font-size: 1rem;
   max-width: 1200px;
   margin: 0 auto;
-  background-color: rgb(rgb(247, 247, 247), green, blue);
 }
 
+/* Header */
 header{
   width: 100%;
   height: auto;
   display: grid;
   grid-area: header;
-  margin-bottom: 20px;
+  margin-bottom: 1.2rem;
   background-color: #1C5D99;
   box-shadow: 1px 2px 2px #1C5D99;
 }
@@ -28,7 +28,7 @@ header{
 }
 
 .logo img {
-  height: 125px;
+  max-width:200px;
 }
 
 a {
@@ -39,8 +39,8 @@ a {
   grid-column: 2/3;
   grid-row: 1/2;
   justify-self: end;
-  margin: 20px;
-  font-size: 1.6em;
+  margin: 1.3rem;
+  font-size: 1.6rem;
 }
 
 .info a {
@@ -62,7 +62,7 @@ a {
   grid-row: 2/3;
   justify-self: end;
   align-self: end;
-  margin: 20px;
+  margin: 1.3rem;
 }
 .menu input {
   display: none;
@@ -93,19 +93,17 @@ a {
   grid-template-areas: "main aside ";
 }
 .main {
-  width: calc(100% - 20px);
+  padding: 0 1rem 0 0;
   display: grid;
-  grid-template-columns: repeat(auto-fill, 300px);
-  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 1rem;
   justify-content: space-between;
   grid-area: main;
   background-color: #fefefeec;
 }
 
 .post {
-  max-width: 300px;
   box-shadow: 0 0 3px 1px #dddddd;
-  overflow: hidden;
 }
 
 .post-img-wrapper {
@@ -352,7 +350,7 @@ a {
     grid-template-areas: "main " "aside ";
   }
   header{
-    margin-bottom: 10px;
+    margin-bottom: 0.8rem;
   }
   .info .search{
     border: none;
