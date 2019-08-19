@@ -99,7 +99,7 @@ a {
 .main {
   padding: 0 1rem 0 0;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, auto));
   grid-gap: 1rem;
   justify-content: space-between;
   grid-area: main;
@@ -107,6 +107,7 @@ a {
 }
 
 .post {
+  display: grid;
   box-shadow: 0 0 3px 1px #dddddd;
 }
 
@@ -124,6 +125,7 @@ a {
 }
 
 .post-info {
+  align-self: flex-end;
   padding: 10px;
   color: #1C5D99;
 }
@@ -144,7 +146,7 @@ a {
 }
 
 .post-statistic {
-  display: inline-block;
+  float: right;
   margin-left: 60px;
 }
 
